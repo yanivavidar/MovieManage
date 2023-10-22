@@ -1,0 +1,84 @@
+:root {
+  --main-font: "Roboto", Arial, sans-serif;
+  --main-color: #fff; /* White text color */
+  --background-color: #000; /* Black background color */
+  --gold-color: #ffbb00; /* Gold link and button color */
+  --bright-gold-color: #ffea00; /* Brighter gold on hover */
+  --dark-background-image: url("background-image.jpg");
+
+  font-family: var(--main-font);
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: var(--main-color);
+  background-color: var(--background-color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: var(--dark-background-image);
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(5px); /* Add a subtle background blur */
+  color: var(--main-color);
+  flex-direction: column;
+}
+
+a {
+  font-weight: 500;
+  color: var(--gold-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--bright-gold-color);
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  border-radius: 6px;
+  border: none;
+  padding: 0.6em 1.5em;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: var(--main-font);
+  background-color: var(--gold-color);
+  color: var(--background-color);
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.2s;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: var(--bright-gold-color);
+  transform: scale(1.05);
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+}
